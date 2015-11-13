@@ -21,7 +21,13 @@ app.on('window-all-closed', function() {
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600, "node-integration": false});
+  mainWindow = new BrowserWindow({
+    "width": 800,
+    "height": 600,
+    "title": "Curses",
+    "node-integration": false,
+    "title-bar-style": "hidden",
+  });
 
   // and load the index.html of the app.
   mainWindow.loadUrl('file://' + __dirname + '/index.html?story=' + __dirname + '/stories/troll.z5.js');
